@@ -1,46 +1,38 @@
 package View;
-
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-
 import javax.swing.*;
+import javax.swing.table.TableColumn;
+import javax.swing.text.html.ObjectView;
+import java.awt.*;
 
 public class FolioGUI extends JPanel {
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
     private JFrame FolioFrame;
-    private JTabbedPane tabbedPane = new JTabbedPane();
 
     public static void main(String[] args) {
         new FolioGUI();
-
     }
-
 
     public FolioGUI() {
-
-        FolioFrame = new JFrame();
-        FolioFrame.setTitle("Folio Tracker");
-        FolioFrame.setSize(800, 800);
-        FolioFrame.setLocationRelativeTo(null);
-        FolioFrame.add(tabbedPane, BorderLayout.CENTER);
-
-        MenuBar();
-        TabPane();
-        button();
-
-
-        FolioFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        FolioFrame.setVisible(true);
-
+        createFrame();
+        addMenuBar();
+        addButtons();
+        addTabs();
+        makeFrameVisible();
     }
 
-    public void MenuBar() {
+    public void createFrame(){
+        FolioFrame = new JFrame();
+        FolioFrame.setTitle("Folio Tracker");
+        FolioFrame.setSize(600, 600);
+        FolioFrame.setLocationRelativeTo(null);
+        FolioFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 
+    public void makeFrameVisible(){
+        FolioFrame.setVisible(true);
+    }
+
+    public void addMenuBar() {
         JMenuBar MenuBar = new JMenuBar();
         FolioFrame.setJMenuBar(MenuBar);
 
@@ -57,61 +49,42 @@ public class FolioGUI extends JPanel {
         MenuOptions.add(SaveFolio);
 
         JMenuItem Exit = new JMenuItem("Exit");
-        Exit.setActionCommand("Exit");
+        MenuOptions.add(Exit);
+
         MenuOptions.add(Exit);
     }
 
-    public void TabPane() {
+    public void addButtons() {
+        JPanel buttons = new JPanel();
+        JButton addStock = new JButton("Add Stock");
+        buttons.add(addStock);
+        JButton buyStock = new JButton("Buy Stock");
+        buttons.add(buyStock);
 
-        JTabbedPane TabPane = new JTabbedPane(JTabbedPane.TOP);
-        SpringLayout springLayout = new SpringLayout();
-        FolioFrame.getContentPane().setLayout(springLayout);
-        springLayout.putConstraint(SpringLayout.WEST, TabPane, 10,
-                SpringLayout.WEST, FolioFrame.getContentPane());
-        springLayout.putConstraint(SpringLayout.EAST, TabPane, -10,
-                SpringLayout.EAST, FolioFrame.getContentPane());
-        FolioFrame.getContentPane().add(TabPane);
-
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
-
-        String[] columnNames = { "Ticker Symbol", "Stock Name", "No. Shares", "Price per Share", "Value", "Gain" };
-        Object[][] data1 = {
-                { "TST 1", "Test Stock 1", new Integer(100), new Integer(1), new Integer(100), new Integer(10) } };
-
-        Object[][] data2 = {
-                { "TST 2", "Test Stock 2", new Integer(150), new Integer(2), new Integer(300), new Integer(125) } };
-
-        Object[][] data3 = {
-                { "TST 1", "Test Stock 3", new Integer(100), new Integer(3), new Integer(300), new Integer(100) } };
-
-        final JTable FolioTable1 = new JTable(data1, columnNames);
-        FolioTable1.setPreferredScrollableViewportSize(new Dimension(300, 70));
-        FolioTable1.setFillsViewportHeight(true);
-
-        final JTable FolioTable2 = new JTable(data2, columnNames);
-        FolioTable2.setPreferredScrollableViewportSize(new Dimension(300, 70));
-        FolioTable2.setFillsViewportHeight(true);
-
-        final JTable FolioTable3 = new JTable(data3, columnNames);
-        FolioTable3.setPreferredScrollableViewportSize(new Dimension(300, 70));
-        FolioTable3.setFillsViewportHeight(true);
-
-        JScrollPane scrollPane1 = new JScrollPane(FolioTable1);
-        TabPane.addTab("Folio 1", null, scrollPane1, null);
-
-        JScrollPane scrollPane2 = new JScrollPane(FolioTable2);
-        TabPane.addTab("Folio 2", null, scrollPane2, null);
-
-        JScrollPane scrollPane3 = new JScrollPane(FolioTable3);
-        TabPane.addTab("Folio 3", null, scrollPane3, null);
-
+        FolioFrame.getContentPane().add(buttons, BorderLayout.NORTH);
     }
 
-    public void button(){
-        JButton btnAddStock = new JButton("Add Stock");
-        FolioFrame.getContentPane().add(btnAddStock);
+    public void addTabs(){
+        JPanel tabsPanel = new JPanel();
+        JTabbedPane tabs = new JTabbedPane();
+
+        tabs.add(addTable(), "NAME");
+        tabs.add(addTable(), "TEST");
+
+        tabsPanel.add(tabs);
+
+        FolioFrame.getContentPane().add(tabsPanel, BorderLayout.CENTER);
     }
 
+    public JScrollPane addTable(){
+        String[] columnNames = {"One", "Two"};
+        Object[][] data = {{"One one", "One two"}, {"Two one","Two two"}};
+
+        JTable stock = new JTable(data, columnNames);
+
+        JScrollPane scrollStock = new JScrollPane(stock);
+
+        return scrollStock;
+    }
 
 }
