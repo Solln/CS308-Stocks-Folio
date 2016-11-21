@@ -1,7 +1,5 @@
 package View;
 import javax.swing.*;
-import javax.swing.table.TableColumn;
-import javax.swing.text.html.ObjectView;
 import java.awt.*;
 
 public class FolioGUI extends JPanel {
