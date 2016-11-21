@@ -15,14 +15,9 @@ public class HoldStocks {
 
         for (ArrayList array : folios){
 
-            array.get(0);
-            array.get(1);
-            array.get(2);
-            array.get(3);
-
             try (PrintWriter out = new PrintWriter(("Folios.txt"))){
 
-                out.println(array.get(0) + " / " + array.get(2) + " / " + array.get(3) + " / " + array.get(4));
+                out.println(array.get(0) + " / " + array.get(1) + " / " + array.get(2) + " / " + array.get(3) + " / " + array.get(4));
 
             }
             catch (FileNotFoundException e) {
