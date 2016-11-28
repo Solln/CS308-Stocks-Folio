@@ -25,7 +25,6 @@ public class FolioGUI extends JPanel {
 		Frame();
 		MenuBar();
 		Buttons();
-		SecondButtons();
 		Tabs();
 		makeFrameVisible();
 	}
@@ -71,38 +70,12 @@ public class FolioGUI extends JPanel {
 
 	public void Buttons() {
 
-		JPanel Buttons = new JPanel();
+		TopButtons addTopButtons = new TopButtons();
+		FolioFrame.getContentPane().add(addTopButtons.init(), BorderLayout.NORTH);
 
-		JLabel TickerL1 = new JLabel("Ticker Symbol");
-		Buttons.add(TickerL1);
-		JTextField TickerT1 = new JTextField(10);
-		Buttons.add(TickerT1);
+		BottomButtons addBottomButtons = new BottomButtons();
+		FolioFrame.getContentPane().add(addBottomButtons.init(), BorderLayout.SOUTH);
 
-		JLabel NumL1 = new JLabel("Number of Shares");
-		Buttons.add(NumL1);
-		JTextField NumT1 = new JTextField(10);
-		Buttons.add(NumT1);
-
-		JButton BuyShareB = new JButton("Buy Shares");
-		Buttons.add(BuyShareB);
-
-		JButton SellShareB = new JButton("Sell Shares");
-		Buttons.add(SellShareB);
-
-		FolioFrame.getContentPane().add(Buttons, BorderLayout.NORTH);
-	}
-
-	public void SecondButtons() {
-
-		JPanel Buttons2 = new JPanel();
-
-		JButton NewStock = new JButton("New Stock");
-		Buttons2.add(NewStock);
-
-		JButton Refresh = new JButton("Refresh");
-		Buttons2.add(Refresh);
-
-		FolioFrame.getContentPane().add(Buttons2, BorderLayout.SOUTH);
 	}
 
 	public void Tabs() {
