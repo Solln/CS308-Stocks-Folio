@@ -5,7 +5,7 @@ import javax.swing.*;
 /**
  * Created by Ryan on 28/11/2016.
  */
-public class Menu {
+public class MenuBar {
 
     public JMenuBar init() {
 

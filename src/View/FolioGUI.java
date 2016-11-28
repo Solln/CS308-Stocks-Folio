@@ -19,7 +19,6 @@ public class FolioGUI extends JPanel {
 	}
 
 	public void frame() {
-
 		FolioFrame = new JFrame();
 		FolioFrame.setTitle("Folio Tracker");
 		FolioFrame.setSize(900, 900);
@@ -32,7 +31,7 @@ public class FolioGUI extends JPanel {
 	}
 
 	public void menuBar() {
-		Menu addMenuBar = new Menu();
+		MenuBar addMenuBar = new MenuBar();
 		FolioFrame.setJMenuBar(addMenuBar.init());
 	}
 
@@ -45,30 +44,8 @@ public class FolioGUI extends JPanel {
 	}
 
 	public void tabs() {
-
-		JPanel tabsPanel = new JPanel();
-		JTabbedPane tabs = new JTabbedPane();
-
-		tabs.add(addTable(), "Folio 1");
-		tabs.add(addTable(), "Folio 2");
-		tabs.add(addTable(), "Folio 3");
-		tabsPanel.add(tabs);
-		FolioFrame.getContentPane().add(tabsPanel, BorderLayout.CENTER);
-	}
-
-	public JScrollPane addTable() {
-
-		String[] columnNames = { "Ticker Symbol", "Name of Stock", " Number of Shares", "Price Per Share",
-				"Total Value", "Gain" };
-
-		Object[][] data = {
-				{ "TST 1", "Tester 1", new Double(100), new Double(5), new Double(500), new Double(-500.00) },
-				{ "TST 2", "Tester 2", new Double(200), new Double(1), new Double(200), new Double(-200) },
-				{ "TST 3", "Tester 3", new Double(100), new Double(3), new Double(300), new Double(300.00) }, };
-
-		JTable stock = new JTable(data, columnNames);
-		JScrollPane scrollStock = new JScrollPane(stock);
-		return scrollStock;
+		Tabs addTabs = new Tabs();
+		FolioFrame.getContentPane().add(addTabs.init(), BorderLayout.CENTER);
 	}
 
 }
