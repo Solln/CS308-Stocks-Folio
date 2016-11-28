@@ -1,6 +1,5 @@
 package View;
 import java.awt.BorderLayout;
-
 import javax.swing.*;
 
 public class FolioGUI extends JPanel {
@@ -13,14 +12,14 @@ public class FolioGUI extends JPanel {
 
 	public FolioGUI() {
 
-		Frame();
-		MenuBar();
-		Buttons();
-		Tabs();
+		frame();
+		menuBar();
+		buttons();
+		tabs();
 		makeFrameVisible();
 	}
 
-	public void Frame() {
+	public void frame() {
 
 		FolioFrame = new JFrame();
 		FolioFrame.setTitle("Folio Tracker");
@@ -33,12 +32,12 @@ public class FolioGUI extends JPanel {
 		FolioFrame.setVisible(true);
 	}
 
-	public void MenuBar() {
+	public void menuBar() {
 		Menu addMenuBar = new Menu();
 		FolioFrame.setJMenuBar(addMenuBar.init());
 	}
 
-	public void Buttons() {
+	public void buttons() {
 		TopButtons addTopButtons = new TopButtons();
 		FolioFrame.getContentPane().add(addTopButtons.init(), BorderLayout.NORTH);
 
@@ -46,7 +45,7 @@ public class FolioGUI extends JPanel {
 		FolioFrame.getContentPane().add(addBottomButtons.init(), BorderLayout.SOUTH);
 	}
 
-	public void Tabs() {
+	public void tabs() {
 
 		JPanel tabsPanel = new JPanel();
 		JTabbedPane tabs = new JTabbedPane();
