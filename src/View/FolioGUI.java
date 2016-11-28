@@ -1,16 +1,7 @@
 package View;
 import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-
-import javax.swing.*;
-import java.awt.*;
 
 public class FolioGUI extends JPanel {
 
@@ -39,43 +30,20 @@ public class FolioGUI extends JPanel {
 	}
 
 	public void makeFrameVisible() {
-
 		FolioFrame.setVisible(true);
 	}
 
 	public void MenuBar() {
-
-		JMenuBar MenuBar = new JMenuBar();
-		FolioFrame.setJMenuBar(MenuBar);
-
-		JMenu MenuOptions = new JMenu("Options");
-		MenuBar.add(MenuOptions);
-
-		JMenuItem NewFolio = new JMenuItem("New Portfolio");
-		MenuOptions.add(NewFolio);
-
-		JMenuItem OpenFolio = new JMenuItem("Open Portfolio");
-		MenuOptions.add(OpenFolio);
-
-		JMenuItem SaveFolio = new JMenuItem("Save Portfolio");
-		MenuOptions.add(SaveFolio);
-
-		JMenuItem DeleteFolio = new JMenuItem("Delete Portfolio");
-		MenuOptions.add(DeleteFolio);
-
-		JMenuItem Exit = new JMenuItem("Exit");
-		MenuOptions.add(Exit);
-
+		Menu addMenuBar = new Menu();
+		FolioFrame.setJMenuBar(addMenuBar.init());
 	}
 
 	public void Buttons() {
-
 		TopButtons addTopButtons = new TopButtons();
 		FolioFrame.getContentPane().add(addTopButtons.init(), BorderLayout.NORTH);
 
 		BottomButtons addBottomButtons = new BottomButtons();
 		FolioFrame.getContentPane().add(addBottomButtons.init(), BorderLayout.SOUTH);
-
 	}
 
 	public void Tabs() {
