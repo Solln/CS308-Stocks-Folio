@@ -13,11 +13,13 @@ public class TopButtons {
 
         JLabel TickerLabel = new JLabel("Ticker Symbol");
         Buttons.add(TickerLabel);
+
         JTextField TickerTable = new JTextField(10);
         Buttons.add(TickerTable);
 
         JLabel NumLabel = new JLabel("Number of Shares");
         Buttons.add(NumLabel);
+
         JTextField NumTable = new JTextField(10);
         Buttons.add(NumTable);
 
