@@ -11,7 +11,6 @@ public class FolioGUI extends JPanel {
 	}
 
 	public FolioGUI() {
-
 		frame();
 		menuBar();
 		buttons();
