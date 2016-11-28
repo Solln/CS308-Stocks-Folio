@@ -11,21 +11,21 @@ public class TopButtons {
 
         JPanel Buttons = new JPanel();
 
-        JLabel TickerL1 = new JLabel("Ticker Symbol");
-        Buttons.add(TickerL1);
-        JTextField TickerT1 = new JTextField(10);
-        Buttons.add(TickerT1);
+        JLabel TickerLabel = new JLabel("Ticker Symbol");
+        Buttons.add(TickerLabel);
+        JTextField TickerTable = new JTextField(10);
+        Buttons.add(TickerTable);
 
-        JLabel NumL1 = new JLabel("Number of Shares");
-        Buttons.add(NumL1);
-        JTextField NumT1 = new JTextField(10);
-        Buttons.add(NumT1);
+        JLabel NumLabel = new JLabel("Number of Shares");
+        Buttons.add(NumLabel);
+        JTextField NumTable = new JTextField(10);
+        Buttons.add(NumTable);
 
-        JButton BuyShareB = new JButton("Buy Shares");
-        Buttons.add(BuyShareB);
+        JButton BuyShare = new JButton("Buy Shares");
+        Buttons.add(BuyShare);
 
-        JButton SellShareB = new JButton("Sell Shares");
-        Buttons.add(SellShareB);
+        JButton SellShare = new JButton("Sell Shares");
+        Buttons.add(SellShare);
 
         return Buttons;
     }
