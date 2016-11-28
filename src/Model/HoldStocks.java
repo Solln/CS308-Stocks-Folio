@@ -13,21 +13,23 @@ public class HoldStocks {
 
         //Save the Stock + the amount in the file
 
-        for (ArrayList array : folios){
+        try (PrintWriter out = new PrintWriter(("Folios.txt"))) {
 
-            try (PrintWriter out = new PrintWriter(("Folios.txt"))){
+        for (ArrayList<ArrayList> array : folios){
 
-                out.println(array.get(0) + " / " + array.get(1) + " / " + array.get(2) + " / " + array.get(3) + " / " + array.get(4));
+            for (ArrayList stock : array) {
 
-            }
-            catch (FileNotFoundException e) {
-                e.printStackTrace();
+                    // The arraylist must contain the format Symbol / Name / Amount / TotalPrice / FolioNum
+                    out.println(stock.get(0) + " / " + stock.get(1) + " / " + stock.get(2) + " / " + stock.get(3) + " / " + stock.get(4));
+
             }
 
         }
 
 
-
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
 
