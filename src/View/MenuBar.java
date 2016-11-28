@@ -16,7 +16,7 @@ public class MenuBar {
         JMenu MenuOptions = new JMenu("Options");
         MenuBar.add(MenuOptions);
 
-        JMenuItem NewFolio = new JMenuItem("New Port");
+        JMenuItem NewFolio = new JMenuItem("New Portfolio");
         MenuOptions.add(NewFolio);
         NewFolio.addActionListener(new MenuBarListener());
 
