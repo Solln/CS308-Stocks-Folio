@@ -22,7 +22,7 @@ public class FolioGUI extends JPanel {
     public void frame() {
         FolioFrame = new JFrame();
         FolioFrame.setTitle("Folio Tracker");
-        FolioFrame.setSize(700, 700);
+        FolioFrame.setSize(700, 600);
         FolioFrame.setLocationRelativeTo(null);
         FolioFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
@@ -39,9 +39,6 @@ public class FolioGUI extends JPanel {
     public void buttons() {
         TopButtons addTopButtons = new TopButtons();
         FolioFrame.getContentPane().add(addTopButtons.init(), BorderLayout.NORTH);
-
-        BottomButtons addBottomButtons = new BottomButtons();
-        FolioFrame.getContentPane().add(addBottomButtons.init(), BorderLayout.SOUTH);
     }
 
     public void tabs() {
