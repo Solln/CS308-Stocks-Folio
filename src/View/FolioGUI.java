@@ -21,7 +21,7 @@ public class FolioGUI extends JPanel {
 	public void frame() {
 		FolioFrame = new JFrame();
 		FolioFrame.setTitle("Folio Tracker");
-		FolioFrame.setSize(900, 900);
+		FolioFrame.setSize(700, 700);
 		FolioFrame.setLocationRelativeTo(null);
 		FolioFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
