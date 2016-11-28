@@ -5,7 +5,7 @@ import javax.swing.*;
 /**
  * Created by Ryan on 28/11/2016.
  */
-public class TopButtons {
+public class Buttons {
 
     public JPanel init() {
 

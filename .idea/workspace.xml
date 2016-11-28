@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57b4f699-da53-4d85-b74a-0d4b26990abe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/View/BottomButtons.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/View/TopButtons.java" afterPath="$PROJECT_DIR$/src/View/Buttons.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FolioGUI.java" afterPath="$PROJECT_DIR$/src/View/FolioGUI.java" />
     </list>
@@ -29,8 +29,8 @@
       <file leaf-file-name="FolioGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/View/FolioGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.36363637">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#183#184#0" expanded="true" />
@@ -88,8 +88,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopButtons.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/TopButtons.java">
+      <file leaf-file-name="Buttons.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Buttons.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
@@ -771,7 +771,13 @@
       <option name="project" value="LOCAL" />
       <updated>1480338216417</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Removed bottom buttons.">
+      <created>1480338930748</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1480338930748</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -825,7 +831,8 @@
     <MESSAGE value="All components individual classes." />
     <MESSAGE value="MenuBarListener added." />
     <MESSAGE value="Showing merge." />
-    <option name="LAST_COMMIT_MESSAGE" value="Showing merge." />
+    <MESSAGE value="Removed bottom buttons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed bottom buttons." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -928,7 +935,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/TopButtons.java">
+    <entry file="file://$PROJECT_DIR$/src/View/Buttons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
@@ -976,8 +983,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/FolioGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.36363637">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#183#184#0" expanded="true" />

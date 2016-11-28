@@ -37,7 +37,7 @@ public class FolioGUI extends JPanel {
     }
 
     public void buttons() {
-        TopButtons addTopButtons = new TopButtons();
+        Buttons addTopButtons = new Buttons();
         FolioFrame.getContentPane().add(addTopButtons.init(), BorderLayout.NORTH);
     }
 
