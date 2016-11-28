@@ -32,6 +32,11 @@ public class MenuBar {
         MenuOptions.add(DeleteFolio);
         DeleteFolio.addActionListener(new MenuBarListener());
 
+        JMenuItem Refresh = new JMenuItem("Refresh Portfolio");
+        MenuOptions.add(Refresh);
+        Refresh.addActionListener(new MenuBarListener());
+
+
         JMenuItem Exit = new JMenuItem("Exit");
         MenuOptions.add(Exit);
         Exit.addActionListener(new MenuBarListener());

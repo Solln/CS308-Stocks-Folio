@@ -1,5 +1,9 @@
 package View;
 
+import Controller.BuyShareListener;
+import Controller.MenuBarListener;
+import Controller.SellShareListener;
+
 import javax.swing.*;
 
 /**
@@ -25,9 +29,11 @@ public class Buttons {
 
         JButton BuyShare = new JButton("Buy Shares");
         Buttons.add(BuyShare);
+        BuyShare.addActionListener(new BuyShareListener());
 
         JButton SellShare = new JButton("Sell Shares");
         Buttons.add(SellShare);
+        SellShare.addActionListener(new SellShareListener());
 
         return Buttons;
     }

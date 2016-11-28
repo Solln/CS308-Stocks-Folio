@@ -20,7 +20,14 @@ public class MenuBarListener implements ActionListener {
         } else if (e.getActionCommand().equals("Delete Portfolio")) {
             System.out.println("Delete Portfolio");
 
-        } else if (e.getActionCommand().equals("Exit")) {
+        } else if (e.getActionCommand().equals("Refresh Portfolio")) {
+            System.out.println("Refresh Portfolio");
+
+        }
+
+
+
+        else if (e.getActionCommand().equals("Exit")) {
             System.exit(0);
         }
 
