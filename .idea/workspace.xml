@@ -4,10 +4,7 @@
     <list default="true" id="57b4f699-da53-4d85-b74a-0d4b26990abe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/BuyShareListener.java" afterPath="$PROJECT_DIR$/src/Controller/BuyShareListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/MenuBarListener.java" afterPath="$PROJECT_DIR$/src/Controller/MenuBarListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/SellShareListener.java" afterPath="$PROJECT_DIR$/src/Controller/SellShareListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/Buttons.java" afterPath="$PROJECT_DIR$/src/View/Buttons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MenuBar.java" afterPath="$PROJECT_DIR$/src/View/MenuBar.java" />
     </list>
     <ignored path="CS308-Stocks-Folio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BuyShareListener.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BuyShareListener.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/BuyShareListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,22 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SellShareListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SellShareListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Buttons.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Buttons.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/Buttons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="330">
               <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
               <folding />
             </state>
@@ -65,21 +50,9 @@
       <file leaf-file-name="MenuBarListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/MenuBarListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="135">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="59" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuBar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/MenuBar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -113,11 +86,11 @@
         <option value="$PROJECT_DIR$/src/View/Tabs.java" />
         <option value="$PROJECT_DIR$/src/View/FolioGUI.java" />
         <option value="$PROJECT_DIR$/src/View/TopButtons.java" />
-        <option value="$PROJECT_DIR$/src/Controller/MenuBarListener.java" />
         <option value="$PROJECT_DIR$/src/View/MenuBar.java" />
         <option value="$PROJECT_DIR$/src/View/Buttons.java" />
-        <option value="$PROJECT_DIR$/src/Controller/BuyShareListener.java" />
         <option value="$PROJECT_DIR$/src/Controller/SellShareListener.java" />
+        <option value="$PROJECT_DIR$/src/Controller/MenuBarListener.java" />
+        <option value="$PROJECT_DIR$/src/Controller/BuyShareListener.java" />
       </list>
     </option>
   </component>
@@ -752,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480338713735</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="All components individual classes.">
+      <created>1480339253133</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1480339253134</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -996,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/MenuBarListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/MenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1014,20 +986,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BuyShareListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SellShareListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1036,9 +998,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Buttons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="330">
           <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MenuBarListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/BuyShareListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

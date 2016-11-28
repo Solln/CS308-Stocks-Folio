@@ -11,5 +11,6 @@ public class BuyShareListener implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
+
     }
 }
