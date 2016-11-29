@@ -1,4 +1,4 @@
-package Model;
+package Model.TextFileManipulation;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

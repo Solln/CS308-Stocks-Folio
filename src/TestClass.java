@@ -1,15 +1,21 @@
 import Model.*;
+import Model.Exceptions.MethodException;
+import Model.Exceptions.NoSuchTickerException;
+import Model.Exceptions.WebsiteDataException;
+import Model.TextFileManipulation.HeldStocks;
 
 import java.util.ArrayList;
 
 
-public class testClass {
+public class TestClass {
 
     static HeldStocks stocks = new HeldStocks();
 
     static ArrayList<ArrayList> testFolios = new ArrayList<>();
 
-    public static void main(String[] args) throws WebsiteDataException, NoSuchTickerException {
+    static ManageFolios newFolios = new FolioWorker();;
+
+    public static void main(String[] args) throws WebsiteDataException, NoSuchTickerException, MethodException {
 
         testHeld();
 
@@ -20,15 +26,17 @@ public class testClass {
 
     private static void testHeld(){
 
+        System.out.println("Starting");
+
         try {
 
-            ArrayList<ArrayList> folios = stocks.getHeldStocks();
+            ArrayList<ArrayList> folios = newFolios.getFolios();
 
 
-            for (ArrayList<ArrayList> x : folios){
+            for (ArrayList<ArrayList> folio : folios){
 
 
-                for (ArrayList<ArrayList> stockDetails : x) {
+                for (ArrayList<ArrayList> stockDetails : folio) {
 
 
                     System.out.println("Ticker: " + stockDetails.get(0));
@@ -37,9 +45,7 @@ public class testClass {
                     System.out.println("Total Spent: " + stockDetails.get(3));
                     System.out.println("Folio Number: " + stockDetails.get(4));
 
-                    String ticker = String.valueOf(stockDetails.get(0));
-
-                    System.out.println("Current Price: " + StrathQuoteServer.getLastValue(ticker));
+                    System.out.println("Current Price: " + stockDetails.get(5));
 
                 }
 
@@ -58,7 +64,7 @@ public class testClass {
     }
 
 
-    private static void testHold(){
+    private static void testHold() throws WebsiteDataException, NoSuchTickerException, MethodException {
 
         ArrayList testStock = new ArrayList();
 
@@ -68,10 +74,9 @@ public class testClass {
         testStock.add("999");
         testStock.add("1");
 
-        testFolios.get(1).add(testStock);
+        newFolios.addStock(1, testStock);
 
-        new HoldStocks(testFolios);
-
+        System.out.println("Added");
 
     }
 

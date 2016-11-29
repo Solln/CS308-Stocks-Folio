@@ -1,5 +1,9 @@
-package Model;
+package Model.TextFileManipulation;
 
+import Model.Exceptions.MethodException;
+import Model.Exceptions.NoSuchTickerException;
+import Model.Exceptions.WebsiteDataException;
+import Model.QuoteServer.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,7 +15,7 @@ import java.util.ArrayList;
 public class HeldStocks {
 
 
-    public ArrayList<ArrayList> getHeldStocks() throws NoSuchTickerException, WebsiteDataException {
+    public ArrayList<ArrayList> getHeldStocks() throws WebsiteDataException, NoSuchTickerException, MethodException {
 
         ArrayList<ArrayList> folios = new ArrayList();
         ArrayList folio = new ArrayList();
@@ -28,14 +32,18 @@ public class HeldStocks {
 
                 String[] lineSplit = line.split("/");
 
-                String currentPrice = StrathQuoteServer.getLastValue(lineSplit[0].trim());
+                IQuote quote = new Quote(false);
+
+                quote.setValues(lineSplit[0].trim());
+
+                double currentPrice = quote.getLatest();
 
                 newLine.add(lineSplit[0].trim());
                 newLine.add(lineSplit[1].trim());
                 newLine.add(lineSplit[2].trim());
                 newLine.add(lineSplit[3].trim());
                 newLine.add(lineSplit[4].trim());
-                newLine.add(currentPrice.trim());
+                newLine.add(currentPrice);
 
                 tempNum = Integer.parseInt(lineSplit[4].trim());
 
