@@ -1,15 +1,16 @@
 package View;
 
+import Controller.BuyShareListener;
+import Controller.SellShareListener;
+
 import java.awt.BorderLayout;
 import javax.swing.*;
 
 public class FolioGUI extends JPanel {
 
     private JFrame FolioFrame;
-
-    public static void main(String[] args) {
-        new FolioGUI();
-    }
+    public JTextField TickerTable = new JTextField(10);
+    public JTextField NumTable = new JTextField(10);
 
     public FolioGUI() {
         frame();
@@ -37,8 +38,29 @@ public class FolioGUI extends JPanel {
     }
 
     public void buttons() {
-        TopButtons addTopButtons = new TopButtons();
-        FolioFrame.getContentPane().add(addTopButtons.init(), BorderLayout.NORTH);
+
+        JPanel Buttons = new JPanel();
+
+        JLabel TickerLabel = new JLabel("Ticker Symbol");
+        Buttons.add(TickerLabel);
+
+        Buttons.add(TickerTable);
+
+        JLabel NumLabel = new JLabel("Number of Shares");
+        Buttons.add(NumLabel);
+
+        Buttons.add(NumTable);
+
+        JButton BuyShare = new JButton("Buy Shares");
+        Buttons.add(BuyShare);
+        BuyShare.addActionListener(new BuyShareListener(this));
+
+        JButton SellShare = new JButton("Sell Shares");
+        Buttons.add(SellShare);
+        SellShare.addActionListener(new SellShareListener());
+
+
+        FolioFrame.getContentPane().add(Buttons, BorderLayout.NORTH);
 
         BottomButtons addBottomButtons = new BottomButtons();
         FolioFrame.getContentPane().add(addBottomButtons.init(), BorderLayout.SOUTH);
