@@ -44,14 +44,13 @@ public class FolioWorkerTest {
         assertTrue(stock.get(0).equals("fb"));
 
 
-
     }
 
 
     @org.junit.Test
     public void removeStock() throws Exception {
 
-        newFolios.removeStock(1, "fb");
+        newFolios.removeStock(1, "goog");
 
         testFolios = newFolios.getFolios();
 
@@ -67,6 +66,30 @@ public class FolioWorkerTest {
         double worth = newFolios.calculateWorth(0, "goog");
 
        assertTrue(worth > 1200);
+
+
+    }
+
+
+
+    @org.junit.Test
+    public void addFolio() throws Exception{
+
+        int size = newFolios.getFolios().size();
+
+        int newSize = newFolios.addFolio().size();
+
+        assertTrue(newSize == (size+1));
+
+
+    }
+
+
+
+    @org.junit.Test
+    public void removeFolio() throws Exception{
+
+        assertTrue(newFolios.removeFolio(1).size() == 1);
 
 
     }

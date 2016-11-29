@@ -84,6 +84,27 @@ public class FolioWorker implements ManageFolios {
 
     }
 
+    @Override
+    public List addFolio() throws WebsiteDataException, NoSuchTickerException, MethodException {
+
+        ArrayList<ArrayList> folios = getFolios();
+        folios.add(new ArrayList<ArrayList>());
+        setFolios(folios);
+
+        return getFolios();
+    }
+
+    @Override
+    public List removeFolio(int folioNumber) throws WebsiteDataException, NoSuchTickerException, MethodException {
+
+        ArrayList<ArrayList> folios = getFolios();
+
+        folios.remove(folioNumber);
+        setFolios(folios);
+
+        return getFolios();
+    }
+
 
     public double calculateWorth(int folioNumber, String ticker) throws WebsiteDataException, NoSuchTickerException, MethodException {
 
