@@ -65,8 +65,6 @@ public class HeldStocks {
             e.printStackTrace();
         }
 
-        folios.add(folio);
-
         // This will contain the Stock object and the amount + totalPrice
         return folios;
     }

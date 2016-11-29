@@ -16,8 +16,13 @@ public interface ManageFolios {
 
     void setFolios(List folios);
 
-    void addStock(int folioNumber, List stock) throws NoSuchTickerException, WebsiteDataException, MethodException;
+    List addStock(int folioNumber, List stock) throws NoSuchTickerException, WebsiteDataException, MethodException;
 
-    void removeStock(int folioNumber, String ticker) throws NoSuchTickerException, WebsiteDataException, MethodException;
+    List removeStock(int folioNumber, String ticker) throws NoSuchTickerException, WebsiteDataException, MethodException;
 
+    List addFolio() throws WebsiteDataException, NoSuchTickerException, MethodException;
+
+    List removeFolio(int folioNumber) throws WebsiteDataException, NoSuchTickerException, MethodException;
+
+    double calculateWorth(int folioNumber, String ticker) throws WebsiteDataException, NoSuchTickerException, MethodException;
 }

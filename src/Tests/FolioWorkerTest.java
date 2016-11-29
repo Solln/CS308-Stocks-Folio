@@ -85,7 +85,6 @@ public class FolioWorkerTest {
     }
 
 
-
     @org.junit.Test
     public void removeFolio() throws Exception{
 
@@ -93,8 +92,6 @@ public class FolioWorkerTest {
 
 
     }
-
-
 
 
 }
