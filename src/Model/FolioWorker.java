@@ -78,10 +78,41 @@ public class FolioWorker implements ManageFolios {
 
         }
 
-
         setFolios(folios);
 
         return getFolios();
 
     }
+
+
+    public double calculateWorth(int folioNumber, String ticker) throws WebsiteDataException, NoSuchTickerException, MethodException {
+
+        ArrayList<ArrayList> folios = getFolios();
+
+        ArrayList<ArrayList> folio = folios.get(folioNumber);
+
+        int temp = 0;
+
+        double totalWorth = 0;
+
+        for (ArrayList stock : folio){
+
+            if (stock.get(0).equals(ticker)){
+
+                int amount=Integer.parseInt((String) stock.get(2));
+                double value = (double) stock.get(5);
+
+                totalWorth = amount*value;
+                break;
+            }
+            else{
+                temp++;
+            }
+
+        }
+
+        return totalWorth;
+
+    }
+
 }

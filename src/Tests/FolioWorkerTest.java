@@ -59,4 +59,19 @@ public class FolioWorkerTest {
 
     }
 
+
+
+    @org.junit.Test
+    public void calculateWorth() throws Exception{
+
+        double worth = newFolios.calculateWorth(0, "goog");
+
+       assertTrue(worth > 1200);
+
+
+    }
+
+
+
+
 }

@@ -18,7 +18,7 @@ public class HeldStocks {
     public ArrayList<ArrayList> getHeldStocks() throws WebsiteDataException, NoSuchTickerException, MethodException {
 
         ArrayList<ArrayList> folios = new ArrayList();
-        ArrayList folio = new ArrayList();
+        ArrayList<ArrayList> folio = new ArrayList();
 
         // Go to the file and get the held stocks
 
@@ -49,15 +49,13 @@ public class HeldStocks {
 
                 //This takes the format - Symbol / Name / Amount / TotalPrice / FolioNum / CurrentPrice
 
-                if (Integer.parseInt(lineSplit[4].trim()) > tempNum){
-                    folios.add(folio);
-                    folio = new ArrayList();
-                    folio.add(newLine);
+
+                while (folios.size() <= tempNum){
+                    folios.add(new ArrayList<ArrayList>());
                 }
-                else
-                {
-                    folio.add(newLine);
-                }
+
+                folios.get(tempNum).add(newLine);
+
 
             }
 
