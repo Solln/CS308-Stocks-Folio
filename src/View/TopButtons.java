@@ -1,8 +1,6 @@
 package View;
 
 import Controller.BuyShareListener;
-import Controller.MenuBarListener;
-import Controller.SellShareListener;
 
 import javax.swing.*;
 

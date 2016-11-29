@@ -1,7 +1,5 @@
 package View;
 
-import Controller.MenuBarListener;
-
 import javax.swing.*;
 
 /**
