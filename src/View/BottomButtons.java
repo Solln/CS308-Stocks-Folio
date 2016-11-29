@@ -14,6 +14,10 @@ public class BottomButtons {
 
         JPanel Buttons = new JPanel();
 
+        JButton BuyShare = new JButton("New Folio");
+        Buttons.add(BuyShare);
+        BuyShare.addActionListener(new BuyShareListener());
+
         JButton BuyShare = new JButton("Close Folio");
         Buttons.add(BuyShare);
         BuyShare.addActionListener(new BuyShareListener());
