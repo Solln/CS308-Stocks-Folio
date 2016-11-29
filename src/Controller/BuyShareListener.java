@@ -42,8 +42,10 @@ public class BuyShareListener implements ActionListener {
         Quote quote = new Quote(false);
 
         try {
+
             quote.setValues(ticker);
             totalSpent = amountOfShares * quote.getLatest();
+
         } catch (IOException e1) {
             e1.printStackTrace();
         } catch (WebsiteDataException e1) {
