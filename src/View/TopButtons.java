@@ -9,7 +9,7 @@ import javax.swing.*;
 /**
  * Created by Ryan on 28/11/2016.
  */
-public class Buttons {
+public class TopButtons {
 
     public JPanel init() {
 
