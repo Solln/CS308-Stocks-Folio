@@ -1,7 +1,6 @@
 package View;
 
-import Controller.BuyShareListener;
-import Controller.SellShareListener;
+import Controller.*;
 
 import javax.swing.*;
 
@@ -14,17 +13,17 @@ public class BottomButtons {
 
         JPanel Buttons = new JPanel();
 
-        JButton BuyShare = new JButton("New Folio");
-        Buttons.add(BuyShare);
-        BuyShare.addActionListener(new BuyShareListener());
+        JButton NewFolio = new JButton("New Folio");
+        Buttons.add(NewFolio);
+        NewFolio.addActionListener(new NewFolioListener());
 
-        JButton BuyShare = new JButton("Close Folio");
-        Buttons.add(BuyShare);
-        BuyShare.addActionListener(new BuyShareListener());
+        JButton CloseFolio = new JButton("Close Folio");
+        Buttons.add(CloseFolio);
+        CloseFolio.addActionListener(new CloseFolioListener());
 
-        JButton SellShare = new JButton("Delete Folio");
-        Buttons.add(SellShare);
-        SellShare.addActionListener(new SellShareListener());
+        JButton DeleteFolio = new JButton("Delete Folio");
+        Buttons.add(DeleteFolio);
+        DeleteFolio.addActionListener(new DeleteFolioListener());
 
         return Buttons;
     }
