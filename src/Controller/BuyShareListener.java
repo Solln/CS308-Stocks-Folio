@@ -21,13 +21,15 @@ public class BuyShareListener implements ActionListener {
         int amountOfShares = 0;
         String ticker = null;
         int folioNum = 0;
+        String name = null;
+        int totalSpent = 0;
 
         ManageFolios worker = new FolioWorker();
 
         ArrayList newStock = new ArrayList();
 
-        newStock.add(ticker);newStock.add("Douno");newStock.add(amountOfShares);
-        newStock.add("100");newStock.add(folioNum);
+        newStock.add(ticker);newStock.add(name);newStock.add(amountOfShares);
+        newStock.add(totalSpent);newStock.add(folioNum);
 
         try {
             worker.addStock(folioNum, newStock);
