@@ -14,12 +14,17 @@ import java.util.List;
  */
 public class FolioWorker implements ManageFolios {
 
+    public ArrayList<ArrayList> folios = null;
+
+
     @Override
     public ArrayList<ArrayList> getFolios() throws WebsiteDataException, NoSuchTickerException, MethodException {
 
         HeldStocks stocks = new HeldStocks();
 
         ArrayList<ArrayList> folios = stocks.getHeldStocks();
+
+        this.folios = folios;
 
         return folios;
 
@@ -35,7 +40,7 @@ public class FolioWorker implements ManageFolios {
 
 
     @Override
-    public void addStock(int folioNumber, List stock) throws WebsiteDataException, NoSuchTickerException, MethodException {
+    public List addStock(int folioNumber, List stock) throws WebsiteDataException, NoSuchTickerException, MethodException {
 
         ArrayList<ArrayList> folios = getFolios();
 
@@ -47,24 +52,36 @@ public class FolioWorker implements ManageFolios {
 
         setFolios(folios);
 
+        return getFolios();
+
     }
 
 
     @Override
-    public void removeStock(int folioNumber, String ticker) throws WebsiteDataException, NoSuchTickerException, MethodException {
+    public List removeStock(int folioNumber, String ticker) throws WebsiteDataException, NoSuchTickerException, MethodException {
 
-        ArrayList<ArrayList> folios;
+        ArrayList<ArrayList> folios = getFolios();
 
-        folios = new HeldStocks().getHeldStocks().get(folioNumber);
+        ArrayList<ArrayList> folio = folios.get(folioNumber);
 
-            for (ArrayList stock : folios){
-                if (stock.contains("ticker")){
-                    folios.remove(stock);
-                }
+        int temp = 0;
+
+        for (ArrayList stock : folio){
+
+            if (stock.get(0).equals(ticker)){
+                folios.get(folioNumber).remove(temp);
+                break;
+            }
+            else{
+            temp++;
             }
 
+        }
 
 
+        setFolios(folios);
+
+        return getFolios();
 
     }
 }
