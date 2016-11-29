@@ -104,7 +104,8 @@ public class FolioGUI extends JPanel {
 
         FolioWorker folio = new FolioWorker();
 
-        int count = folio.getFolios().size();
+//        int count = folio.getFolios().size();
+        int count = 5;
 
         for (int i = 0; i < count; i++) {
             tabs.add(addTable(), "Folio " + i);
@@ -135,11 +136,11 @@ public class FolioGUI extends JPanel {
 
         JButton NewFolio = new JButton("New Folio");
         Buttons.add(NewFolio);
-        NewFolio.addActionListener(new NewFolioListener());
+        NewFolio.addActionListener(new NewFolioListener(this));
 
         JButton CloseFolio = new JButton("Close Folio");
         Buttons.add(CloseFolio);
-        CloseFolio.addActionListener(new CloseFolioListener());
+        CloseFolio.addActionListener(new CloseFolioListener(this));
 
         JButton DeleteFolio = new JButton("Delete Folio");
         Buttons.add(DeleteFolio);
