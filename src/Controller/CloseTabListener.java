@@ -8,11 +8,11 @@ import java.awt.event.ActionListener;
 /**
  * Created by Ryan on 29/11/2016.
  */
-public class SellShareListener implements ActionListener {
+public class CloseTabListener implements ActionListener{
 
     FolioGUI copy;
 
-    public SellShareListener(FolioGUI folioGUI) {
+    public CloseTabListener(FolioGUI folioGUI) {
 
         copy = folioGUI;
 
@@ -21,7 +21,9 @@ public class SellShareListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-
+        copy.tabs.remove(copy.tabs.getSelectedIndex());
+        copy.remove(copy.tabsPanel);
+        copy.addTable();
 
     }
 }
