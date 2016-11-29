@@ -10,6 +10,7 @@ import View.FolioGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -28,11 +29,11 @@ public class BuyShareListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        int amountOfShares = 0;
-        String ticker = null;
+        int amountOfShares = Integer.parseInt(copy.NumTable.getText());
+        String ticker = copy.TickerTable.getText();
         int folioNum = 0;
         String name = null;
-        int totalSpent = 0;
+        double totalSpent = 0;
 
         ManageFolios worker = new FolioWorker();
 
@@ -40,9 +41,23 @@ public class BuyShareListener implements ActionListener {
 
         Quote quote = new Quote(false);
 
-        newStock.add(copy.TickerTable.getText());
+        try {
+            quote.setValues(ticker);
+            totalSpent = amountOfShares * quote.getLatest();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        } catch (WebsiteDataException e1) {
+            e1.printStackTrace();
+        } catch (NoSuchTickerException e1) {
+            e1.printStackTrace();
+        } catch (MethodException e1) {
+            e1.printStackTrace();
+        }
+
+
+        newStock.add(ticker);
         newStock.add("Placeholder");
-        newStock.add(copy.NumTable.getText());
+        newStock.add(amountOfShares);
         newStock.add(totalSpent);
         newStock.add(folioNum);
 
