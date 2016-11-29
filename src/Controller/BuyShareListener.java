@@ -32,7 +32,7 @@ public class BuyShareListener implements ActionListener {
         int amountOfShares = Integer.parseInt(copy.NumTable.getText());
         String ticker = copy.TickerTable.getText();
         int folioNum = 0;
-        String name = null;
+        String name = "Placeholder";
         double totalSpent = 0;
 
         ManageFolios worker = new FolioWorker();
@@ -58,7 +58,7 @@ public class BuyShareListener implements ActionListener {
 
 
         newStock.add(ticker);
-        newStock.add("Placeholder");
+        newStock.add(name);
         newStock.add(amountOfShares);
         newStock.add(totalSpent);
         newStock.add(folioNum);
